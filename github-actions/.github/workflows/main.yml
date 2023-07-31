@@ -55,7 +55,7 @@ jobs:
 
     - uses: azure/appservice-settings@v1
       with:
-        app-name: 'ansalemo-go-packeto'
+        app-name: 'ghactions-go-packeto'
         # For DOCKER_REGISTRY_SERVER_PASSWORD and DOCKER_REGISTRY_SERVER_USERNAME, you can set this to your username/password through ACR Admin Credentials
         # This example is using a Service Principal with the AcrPush role 
         app-settings-json: |
@@ -87,7 +87,7 @@ jobs:
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'ansalemo-go-packeto'
+        app-name: 'ghactions-go-packeto'
         slot-name: 'production'
         images: '${{ secrets.AZURE_CONTAINER_REGISTRY_URL }}/pack-cli-cicd-examples:${{ github.sha }}'
 
