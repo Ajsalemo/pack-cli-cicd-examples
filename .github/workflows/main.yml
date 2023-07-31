@@ -56,6 +56,8 @@ jobs:
     - uses: azure/appservice-settings@v1
       with:
         app-name: 'ansalemo-go-packeto'
+        # For DOCKER_REGISTRY_SERVER_PASSWORD and DOCKER_REGISTRY_SERVER_USERNAME, you can set this to your username/password through ACR Admin Credentials
+        # This example is using a Service Principal with the AcrPush role 
         app-settings-json: |
           [
             { 
@@ -71,12 +73,12 @@ jobs:
             },  
             {
                 "name": "DOCKER_REGISTRY_SERVER_URL",
-                "value": "https://${{ secrets.AZURE_SP_CLIENT_SECRET }}",
+                "value": "https://${{ secrets.AZURE_CONTAINER_REGISTRY_URL }}",
                 "slotSetting": false
             },
             {
                 "name": "DOCKER_REGISTRY_SERVER_USERNAME",
-                "value": "${{ secrets.AZURE_CONTAINER_REGISTRY_USERNAME  }}",
+                "value": "${{ secrets.AZURE_SP_CLIENT_SECRET }}",
                 "slotSetting": false
             }
           ]
