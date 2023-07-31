@@ -68,7 +68,7 @@ jobs:
             },
             {
                 "name": "DOCKER_REGISTRY_SERVER_PASSWORD",
-                "value": "${{ secrets.AZURE_SP_CLIENT_ID }}",
+                "value": "${{ secrets.AZURE_SP_CLIENT_SECRET }}",
                 "slotSetting": false
             },  
             {
@@ -78,7 +78,7 @@ jobs:
             },
             {
                 "name": "DOCKER_REGISTRY_SERVER_USERNAME",
-                "value": "${{ secrets.AZURE_SP_CLIENT_SECRET }}",
+                "value": "${{ secrets.AZURE_SP_CLIENT_ID }}",
                 "slotSetting": false
             }
           ]
