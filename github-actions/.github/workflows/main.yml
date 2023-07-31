@@ -21,8 +21,6 @@ jobs:
       - name: Checkout to the branch
         uses: actions/checkout@v2
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
       # Log into ACR so we can push the image we build with pack to this registry
       # Pack uses the logged in registry credentials
       - name: Log in to container registry
