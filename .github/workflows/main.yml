@@ -64,6 +64,6 @@ jobs:
       with:
         app-name: 'ansalemo-go-packeto'
         slot-name: 'production'
-        images: 'ansalemoacr.azurecr.io/ansalemo-go-packeto:${{ github.sha }}'
+        images: 'ansalemoacr.azurecr.io/pack-cli-cicd-examples:${{ github.sha }}'
 
           
