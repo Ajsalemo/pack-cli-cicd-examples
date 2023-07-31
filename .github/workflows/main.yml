@@ -66,12 +66,12 @@ jobs:
             },
             {
                 "name": "DOCKER_REGISTRY_SERVER_PASSWORD",
-                "value": "${{ secrets.AZURE_CONTAINER_REGISTRY_PASSWORD }}",
+                "value": "${{ secrets.AZURE_SP_CLIENT_ID }}",
                 "slotSetting": false
             },  
             {
                 "name": "DOCKER_REGISTRY_SERVER_URL",
-                "value": "https://${{ secrets.AZURE_CONTAINER_REGISTRY_URL }}",
+                "value": "https://${{ secrets.AZURE_SP_CLIENT_SECRET }}",
                 "slotSetting": false
             },
             {
