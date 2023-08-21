@@ -13,5 +13,5 @@ func main() {
         return c.SendString("Hello, world - from Fiber!")
     })
 
-    log.Fatal(app.Listen(":8080"))
+    log.Fatal(app.Listen(":3000"))
 }
